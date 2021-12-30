@@ -138,7 +138,7 @@ BulkWriter.prototype.write = function write(body) {
           const opKey = Object.keys(item)[0];
           if (item[opKey] && item[opKey].error) {
             debug('elasticsearch indexing error', item[opKey].error);
-            console.error('elasticsearch indexing error', item[opKey].error, bodyData);
+            // console.error('elasticsearch indexing error', item[opKey].error, bodyData);
             err.indexError = item[opKey].error;
             err.causedBy = bodyData;
           }
